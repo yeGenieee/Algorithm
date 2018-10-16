@@ -28,3 +28,7 @@
 *.app
 
 .DS_Store
+
+.vscode
+
+settings.json
