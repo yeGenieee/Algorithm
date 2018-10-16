@@ -20,5 +20,5 @@ int main() {
     cout<<(date[day % 7])<<"\n";
     
 
-
+    return 0;
 }
