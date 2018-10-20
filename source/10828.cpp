@@ -30,7 +30,7 @@ struct Stack {
     }
 
     int top() {
-        if (data[size]) {
+        if (empty()) {
             return data[size-1];
         } else {
             return -1;
@@ -53,9 +53,9 @@ int main() {
 
     cin>>n;
 
-    for(int i=0;i<n;i++) {
-        Stack st;
+    Stack st;
 
+    for(int i=0;i<n;i++) {
         string cmd;
 
         cin>>cmd;
@@ -76,4 +76,6 @@ int main() {
             
         }
     }
+
+    return 0;
 }
