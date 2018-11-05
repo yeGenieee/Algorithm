@@ -1,5 +1,3 @@
-
-
 *.o
 *.obj
 
@@ -13,8 +11,8 @@
 *.dll
 
 # Fortran module files
-*.mod
-*.smod
+# *.mod
+# *.smod
 
 # Compiled Static libraries
 *.lai
@@ -29,6 +27,6 @@
 
 .DS_Store
 
-.vscode
+# .vscode
 
 settings.json
