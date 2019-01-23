@@ -32,4 +32,23 @@ public class LargestNumberAtLeastTwiceOfOthers {
 
         return dominant_index;
     }
+
+    /**
+     * */
+    public int dominantIndexOfficialSolution(int[] nums) {
+        int maxIndex = 0;
+        for (int i=0;i<nums.length;i++) { // 최대값 찾기
+            if (nums[i] > nums[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+
+        for (int i=0; i<nums.length;i++) {
+            if (i != maxIndex && nums[maxIndex] < 2 * nums[i]) {
+                return -1;
+            }
+        }
+
+        return maxIndex;
+    }
 }
