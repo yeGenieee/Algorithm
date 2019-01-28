@@ -34,3 +34,9 @@ settings.json
 ../.DS_Store
 .idea/
 source/leet-code/.idea/
+source/BOJ/.idea/
+source/BOJ/gradle/
+source/BOJ/gradlew
+source/BOJ/build.gradle
+source/BOJ/gradlew.bat
+source/BOJ/settings.gradle

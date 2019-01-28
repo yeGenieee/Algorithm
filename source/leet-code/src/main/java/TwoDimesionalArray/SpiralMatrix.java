@@ -13,7 +13,6 @@ public class SpiralMatrix {
 
         int row=0, col=0;
 
-
         for (int i=0;i<matrix.length*matrix[0].length;i++) {
 
         }
