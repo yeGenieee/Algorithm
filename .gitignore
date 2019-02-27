@@ -40,3 +40,10 @@ source/BOJ/gradlew
 source/BOJ/build.gradle
 source/BOJ/gradlew.bat
 source/BOJ/settings.gradle
+
+source/codility/.idea/
+source/codility/gradle/
+source/codility/gradlew
+source/codility/build.gradle
+source/codility/gradlew.bat
+source/codility/settings.gradle
