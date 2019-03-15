@@ -1,4 +1,4 @@
-// you can also use imports, for example:
+package Iterations;// you can also use imports, for example:
 // import java.util.*;
 
 // you can write to stdout for debugging purposes, e.g.
@@ -6,8 +6,8 @@
 
 class BinaryGap {
     public int solution(int N) {
-        int maxBinaryGap = 0; // 최대 BinaryGap 수 (Output)
-        int currentBinaryGap = 0; // 현재 BinaryGap 수
+        int maxBinaryGap = 0; // 최대 Iterations.BinaryGap 수 (Output)
+        int currentBinaryGap = 0; // 현재 Iterations.BinaryGap 수
 
         String binNum = Integer.toBinaryString(N); // 이진수 String으로 변환
 
