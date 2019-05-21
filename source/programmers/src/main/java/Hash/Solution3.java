@@ -29,10 +29,12 @@ public class Solution3 {
 
         for (int i=0;i<clothes.length-1;i++) {
             for(int j=i+1;j<clothes.length;j++) {
-                if (hm.get(clothes[i][0]) != hm.get(clothes[j][0]))
+                if (!(hm.get(clothes[i][0]).equals(hm.get(clothes[j][0]))))
                     answer++;
             }
         }
+
+        System.out.println(answer);
 
         return answer;
     }
