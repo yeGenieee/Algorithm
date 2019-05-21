@@ -20,21 +20,25 @@ public class Solution3 {
     public static int solution(String[][] clothes) {
         int answer = 0;
 
-        HashMap<String,String> hm = new HashMap<>();
+        HashMap<String,Integer> hm = new HashMap<>();
 
-        for (int i=0;i<clothes.length;i++)
-            hm.put(clothes[i][0],clothes[i][1]);
+        for (int i=0;i<clothes.length;i++) {
+            String key = clothes[i][1];
 
-        answer += clothes.length;
-
-        for (int i=0;i<clothes.length-1;i++) {
-            for(int j=i+1;j<clothes.length;j++) {
-                if (!(hm.get(clothes[i][0]).equals(hm.get(clothes[j][0]))))
-                    answer++;
+            if (!hm.containsKey(key)) {
+                hm.put(clothes[i][1],1);
+            } else {
+                hm.replace(clothes[i][1],hm.get(clothes[i][1])+1);
             }
         }
 
-        System.out.println(answer);
+       answer = 1;
+
+        for (int value: hm.values()) {
+            answer *=(value+1);
+        }
+
+        answer--;
 
         return answer;
     }
