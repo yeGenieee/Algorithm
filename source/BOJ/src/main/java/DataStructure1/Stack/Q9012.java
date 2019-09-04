@@ -82,4 +82,43 @@ public class Q9012 {
 
         return result;
     } */
+
+    /**
+     * 스택이 아닌 스택의 사이즈만을 이용한 풀이
+     * */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+
+        while(num-- > 0) {
+            System.out.println(isValidPS(sc.next()));
+        }
+    }
+
+    public static String isValidPS(String str) {
+        int size = 0;
+        if (str.length() % 2 != 0) {
+            return "NO";
+        }
+
+        for (int i=0; i < str.length(); i++) {
+            if (str.charAt(i) == '(') {
+                size++;
+            } else {
+                if (size < 0) {
+                    return "NO";
+                } else {
+                    size--;
+                }
+            }
+        }
+
+        if (size == 0) {
+            return "YES";
+        } else {
+            return "NO";
+        }
+    }
+
 }
