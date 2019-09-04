@@ -41,4 +41,45 @@ public class Q9012 {
 
         return result;
     }
+
+    // BufferedReader를 이용한 풀이
+    /*
+    public static void main(String[] args) throws IOException{
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        int num = Integer.parseInt(bf.readLine());
+
+        while (num-- > 0) {
+            String str = bf.readLine();
+            System.out.println(isValidPS(str));
+        }
+    }
+
+    public static String isValidPS(String str) {
+        String result = "NO";
+
+        Stack<Character> stack = new Stack<>();
+        if (str.length() % 2 != 0) {
+            return "NO";
+        }
+        for (char ch : str.toCharArray()) {
+            if (ch == '(') {
+                stack.push(ch);
+            } else {
+                if (stack.isEmpty()) {
+                    return "NO";
+                } else {
+                    if (stack.pop() == '(') {
+                        result = "YES";
+                    } else {
+                        return "NO";
+                    }
+                }
+            }
+        }
+        if (!stack.isEmpty()) {
+            return "NO";
+        }
+
+        return result;
+    } */
 }
