@@ -106,11 +106,10 @@ public class Q9012 {
             if (str.charAt(i) == '(') {
                 size++;
             } else {
-                if (size < 0) {
-                    return "NO";
-                } else {
-                    size--;
-                }
+                size--;
+            }
+            if (size < 0) {
+                return "NO";
             }
         }
 
