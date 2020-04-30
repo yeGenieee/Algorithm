@@ -53,11 +53,7 @@ gradle/
 gradlew
 gradlew.bat
 settings.gradle
-src/main/java/
-src/main/resources/
-src/test/
 
-.idea/
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
