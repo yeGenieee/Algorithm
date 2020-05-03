@@ -1,6 +1,6 @@
 package com.algorithm.leetcode.binarysearch;
 
-public class FirstBadVersion {
+public class Q278_FirstBadVersion {
     /**
      * for 문을 이용한 solution --> Time Limit Exceeded
      * Time Complexity : O(log n)
