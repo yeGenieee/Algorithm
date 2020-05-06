@@ -8,6 +8,6 @@ public class Q17298 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
-        int []arr = Integer.parseInt(br.readLine().split(" "));
+//        int []arr = Integer.parseInt(br.readLine().split(" "));
     }
 }
