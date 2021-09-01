@@ -1,11 +1,39 @@
 package com.algorithm.boj.basic;
 
-public class Q1065 {
+import java.util.Scanner;
 
+public class Q1065 {
     public static void main(String[] args) {
-        System.out.println("\\    /\\");
-                System.out.println(" )  ( ')");
-        System.out.println("(  /  )");
-        System.out.println("\\(__)|");
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+
+        System.out.println(getCount(N));
     }
+
+    public static int getCount(int number) {
+        int cnt = 0;
+
+        if (number < 100) {
+            return number;
+        } else {
+            cnt = 99;
+
+            if (number == 1000) {
+                number = 999;
+            }
+
+            for (int i = 100; i <= number; i++) {
+                int hundred = i / 100;
+                int ten = (i / 10) % 10;
+                int one = i % 10;
+
+                if ((hundred - ten)  == (ten - one)) {
+                    cnt++;
+                }
+            }
+        }
+
+        return cnt;
+    }
+
 }
