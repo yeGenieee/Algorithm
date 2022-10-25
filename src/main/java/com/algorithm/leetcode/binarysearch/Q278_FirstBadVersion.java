@@ -12,11 +12,11 @@ public class Q278_FirstBadVersion {
 
         while(left < right) { // 이진 탐색 종료 조건 : left 가 right를 넘어서는 경우 -> 그 때의 left가 firstBadVersion
             int mid = left + (right - left) / 2; // overflow 방지
-            if (isBadVersion(mid)) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
+//            if (isBadVersion(mid)) {
+//                right = mid;
+//            } else {
+//                left = mid + 1;
+//            }
         }
 
         return left;

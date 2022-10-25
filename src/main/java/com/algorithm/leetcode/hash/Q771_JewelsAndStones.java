@@ -8,18 +8,18 @@ public class Q771_JewelsAndStones {
      * TimeComplexity : O(m * n)
      * SpaceComplexity : O(1)
      * */
-    public int numJewelsInStones(String J, String S) {
-        int cnt = 0;
-        // J의 길이만큼 - 각 S의 길이만큼 J와 S의 글자 비교하여 같으면 cnt++
-        for (int i=0; i<J.length(); i++) {
-            for (int j=0;j<S.length(); j++) {
-                if (J.charAt(i) == S.charAt(j)) {
-                    cnt++;
-                }
-            }
-        }
-        return cnt;
-    }
+//    public int numJewelsInStones(String J, String S) {
+//        int cnt = 0;
+//        // J의 길이만큼 - 각 S의 길이만큼 J와 S의 글자 비교하여 같으면 cnt++
+//        for (int i=0; i<J.length(); i++) {
+//            for (int j=0;j<S.length(); j++) {
+//                if (J.charAt(i) == S.charAt(j)) {
+//                    cnt++;
+//                }
+//            }
+//        }
+//        return cnt;
+//    }
 
     /**
      * Set을 이용한 풀이
