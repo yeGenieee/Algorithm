@@ -88,8 +88,48 @@ public class RomanToInteger {
             total += values2.get(singleSymbol);
             i += 1;
         }
+        return total;
+    }
+
+    static Map<String, Integer> values3 = new HashMap<>();
+
+    static {
+        values3.put("M", 1000);
+        values3.put("D", 500);
+        values3.put("C", 100);
+        values3.put("L", 50);
+        values3.put("X", 10);
+        values3.put("V", 5);
+        values3.put("I", 1);
+    }
+
+    /**
+     * 맨 끝부터 비교
+     * 시간복잡도 : O(1)
+     * 공간복잡도 : O(1)
+     * @param s
+     * @return
+     */
+    public int romanToInt(String s) {
+        String lastSymbol = s.substring(s.length() - 1);
+        int lastValue = values3.get(lastSymbol);
+
+        int total = lastValue;
+
+        for (int i = s.length() - 2; i >= 0; i--) {
+            String currentSymbol = s.substring(i, i + 1);
+            int currentValue = values3.get(currentSymbol);
+
+            if (currentValue < lastValue) {
+                total -= currentValue;
+            } else {
+                total += currentValue;
+            }
+            lastValue = currentValue;
+        }
 
         return total;
-
     }
+
+
 }
