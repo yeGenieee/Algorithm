@@ -80,6 +80,7 @@ public class RomanToInteger {
                 if (values2.containsKey(doubleSymbol)) {
                     total += values2.get(doubleSymbol);
                     i += 2;
+                    continue;
                 }
             }
 
