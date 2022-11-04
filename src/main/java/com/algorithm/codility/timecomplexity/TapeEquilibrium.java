@@ -9,13 +9,8 @@ public class TapeEquilibrium {
         int min = Integer.MAX_VALUE;
         int leftsum = A[0];
 
-        for (int i = 0; i < A.length; i++) {
-            int rightsum = total - leftsum;
-            int difference = Math.abs(leftsum - rightsum);
-
-            if (difference < min) {
-                min = difference;
-            }
+        for (int i = 1; i < A.length; i++) {
+            min = Math.min(min, Math.abs(leftsum - (total - leftsum)));
             leftsum += A[i];
         }
 
