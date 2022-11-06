@@ -12,6 +12,8 @@
  *      A[k] == N + 1이면 max counter로 counter값을 모두 갱신
  *          currentMin을 currentMax로 갱신
  * 2. counter 배열을 순회하면서 counter[i]와 currentMin 중 최대값으로 갱신한다
+ *
+ * 시간 복잡도 : O(N)
  */
 public class MaxCounter {
     public int[] maxCounter(int N, int[] A) {
