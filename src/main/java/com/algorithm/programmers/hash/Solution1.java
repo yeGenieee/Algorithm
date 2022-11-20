@@ -43,6 +43,12 @@ public class Solution1 {
         for (String runner : participant) hm.put(runner, hm.getOrDefault(runner,0) + 1);
         for (String runner : completion) hm.put(runner, hm.get(runner) - 1);
 
+        for (String key : map.keySet()) {
+            if (map.get(key) == 1) {
+                answer = key;
+            }
+        }
+
         return answer;
     }
 
@@ -63,4 +69,5 @@ public class Solution1 {
 
         return answer;
     }
+
 }
